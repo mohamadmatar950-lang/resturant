@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Mohamad Matar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">M.MATAR<span>FOOD</span></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active-link">Menu</a></li>
+        </ul>
+
+        <!-- CART -->
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- MENU -->
+    <section class="menu-container">
+        <h2 class="section-title">Explore Menu</h2>
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" onclick="filterMenu('all', event)">All</button>
+            <button class="filter-btn" onclick="filterMenu('fastfood', event)">🍔 Fast Food</button>
+            <button class="filter-btn" onclick="filterMenu('drink', event)">🥤 Drinks</button>
+            <button class="filter-btn" onclick="filterMenu('sweet', event)">🍰 Sweets</button>
+        </div>
+
+        <div class="menu-grid" id="menu-items"></div>
+    </section>
+
+    <!-- CART -->
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+
+        <div id="cart-items">
+            <p class="empty-cart">Cart is empty</p>
+        </div>
+
+        <h3 id="cart-total">Total: $0</h3>
+
+        <button onclick="sendOrder()" class="order-btn">
+            📲 Send Order via WhatsApp
+        </button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
